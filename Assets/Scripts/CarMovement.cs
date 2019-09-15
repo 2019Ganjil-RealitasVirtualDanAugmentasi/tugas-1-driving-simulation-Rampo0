@@ -26,7 +26,8 @@ public class CarMovement : MonoBehaviour
 
 		//transform.Translate(new Vector3(0, 0, frontAxis * speed * Time.deltaTime), Space.Self);
 		//rb.velocity = transform.forward * frontAxis * speed;
-
+		
+		//adforce
 		rb.AddForce(transform.forward * frontAxis * speed * speed, ForceMode.Acceleration);
 
 		/*if (frontAxis > 0)
