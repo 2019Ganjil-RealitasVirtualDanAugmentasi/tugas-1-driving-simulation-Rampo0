@@ -25,10 +25,10 @@ public class CarMovement : MonoBehaviour
 		float horiAxis = Input.GetAxis("xbox");
 
 		//transform.Translate(new Vector3(0, 0, frontAxis * speed * Time.deltaTime), Space.Self);
-		//rb.velocity = transform.forward * frontAxis * speed;
+		rb.velocity = transform.forward * frontAxis * speed;
 		
 		
-		rb.AddForce(transform.forward * frontAxis * speed * speed, ForceMode.Acceleration);
+		//rb.AddForce(transform.forward * frontAxis * speed * speed, ForceMode.Acceleration);
 
 		/*if (frontAxis > 0)
 		{
@@ -51,6 +51,8 @@ public class CarMovement : MonoBehaviour
 		else if(direction > 0){
 			transform.Rotate(new Vector3(0, horiAxis * sensivity, 0), Space.Self);
 		}
+
+		//transform.Rotate(new Vector3(0, horiAxis * sensivity, 0), Space.Self);
 
 		//Debug.Log(frontAxis);
 
