@@ -15,6 +15,8 @@ public class CarMovement : Controller
 	[SerializeField] private Transform steer;
 	float maxAngle = 45f;
 	bool steerType = false;
+	private float maxSpeed = 10;
+	private float minSpeed = 7;
 
     void Awake()
     {
@@ -40,21 +42,6 @@ public class CarMovement : Controller
 			steerType = true;
 		}
 
-		//transform.Translate(new Vector3(0, 0, frontAxis * speed * Time.deltaTime), Space.Self);
-
-		/*float direction = Vector3.Dot(transform.forward, rb.velocity.normalized);
-
-		if (direction < 0)
-		{
-			transform.Rotate(new Vector3(0, -1 * horiAxis * sensivity, 0), Space.Self);
-		}
-		else if (direction > 0)
-		{
-			transform.Rotate(new Vector3(0, horiAxis * sensivity, 0), Space.Self);
-		}*/
-
-		//steer.Rotate(new Vector3(0, -(Mathf.Lerp(horiAxis,  horiAxis * 1.5f, 0.1f)), 0), Space.Self);
-		//Debug.Log(steer.transform.eulerAngles);
 
 		if (!steerType)
 		{
@@ -83,8 +70,24 @@ public class CarMovement : Controller
 			}
 		}
 
+		DecreseSpeed();
+	}
 
+	public void IncreaseSpeed(float _speed) {
+		speed += _speed;
+		if (speed > maxSpeed) {
+			speed = 10f;
+		}
+	}
 
+	private void DecreseSpeed() {
+
+		if (speed > minSpeed)
+		{
+			//Decrease speed make it 7f
+			speed -= 0.005f;
+		}
+		
 	}
 
 }

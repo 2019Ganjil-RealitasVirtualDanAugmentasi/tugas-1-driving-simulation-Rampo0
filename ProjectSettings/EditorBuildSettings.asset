@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/SplashScreen.unity
+    guid: d54a881fb2b09704ea7e57132d528ce3
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/LoadingScene.unity
+    guid: 56f1ac99343f6c149a14c4f7d74c862e
+  - enabled: 1
+    path: Assets/Scenes/CarSelect.unity
+    guid: 21c30752a15e5bb4fb4d520cac4db668
   m_configObjects: {}
